@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "Verify (pilot)",
+  "version": "0.1.0",
+  "description": "Check whether a profile is really who it claims to be.",
+  "action": { "default_popup": "popup.html", "default_title": "Verify" },
+  "permissions": ["activeTab", "scripting", "storage"]
+}

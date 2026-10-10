@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verify</title>
+  <style>
+    :root { color-scheme: light dark; --bg:#fff; --fg:#1a1a1a; --muted:#666; --ok:#1a7f37; --warn:#b35900; --bad:#c62828; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#1b1b1b; --fg:#eee; --muted:#aaa; --ok:#4cc26a; --warn:#ffb454; --bad:#ff6b6b; } }
+    body { margin:0; padding:14px; width:320px; background:var(--bg); color:var(--fg); font:14px/1.4 system-ui, sans-serif; }
+    h1 { font-size:13px; margin:0 0 10px; color:var(--muted); font-weight:600; }
+    #result { font-size:16px; font-weight:600; margin-bottom:4px; }
+    #detail { color:var(--muted); margin-bottom:12px; }
+    .ok { color:var(--ok); } .warn { color:var(--warn); } .bad { color:var(--bad); }
+    label { display:block; font-size:12px; color:var(--muted); margin-top:8px; }
+    input { width:100%; box-sizing:border-box; padding:6px; margin-top:2px; background:transparent; color:inherit; border:1px solid var(--muted); border-radius:4px; }
+  </style>
+</head>
+<body>
+  <h1>Verify (pilot)</h1>
+  <div id="result">Checking…</div>
+  <div id="detail"></div>
+  <label>Registry server <input id="server" type="url"></label>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

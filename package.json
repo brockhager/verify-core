@@ -1,0 +1,15 @@
+{
+  "name": "verify-core",
+  "version": "0.1.0",
+  "description": "Registry server and browser extension for the Verify project",
+  "type": "module",
+  "license": "AGPL-3.0-or-later",
+  "private": true,
+  "engines": { "node": ">=22" },
+  "dependencies": { "verify-spec": "file:../verify-spec" },
+  "scripts": {
+    "start": "node server/src/main.js",
+    "sync-spec": "node scripts/sync-spec.mjs",
+    "test": "node scripts/sync-spec.mjs && node --test \"server/test/*.test.js\" \"extension/test/*.test.js\""
+  }
+}
